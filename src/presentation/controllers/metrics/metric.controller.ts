@@ -16,12 +16,11 @@ export class MetricController {
         },
         steps: 2546,
         sleep: "8h 46m",
-        workout: "1h 27m",
+        workout: "1h 26m",
         meditation: "0 mins",
       };
 
       ApiResponse.success(res, mockData, "Dados recuperados com sucesso");
-      res.status(200).json({ valid: true });
     } catch (error) {
       ApiResponse.error(res, error, "Erro ao recuperar os dados");
     }
