@@ -12,6 +12,7 @@ connectToDatabase();
 
 import { authRoutes } from "./presentation/routes/auth.route";
 import { userRoutes } from "./presentation/routes/user.route";
+import { metricRoutes } from "./presentation/routes/metric.route";
 
 const app: Application = express();
 
@@ -20,6 +21,7 @@ app.use(express.json());
 
 app.use("/auth", authRoutes);
 app.use("/user", userRoutes);
+app.use("/metric", metricRoutes);
 app.get('/', (req, res) => {
   res.send("API ON");
 });
